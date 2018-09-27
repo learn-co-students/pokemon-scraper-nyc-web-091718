@@ -11,7 +11,7 @@ describe "Pokemon" do
   let(:pokemon) {Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)}
 
   describe ".initialize" do
-    it 'is initialized with keyword arguments of id, name, type and db' do
+    it 'is initialized with keyword arguments of id, name, text and db' do
       expect(pokemon).to respond_to(:id)
       expect(pokemon).to respond_to(:name)
       expect(pokemon).to respond_to(:type)
@@ -39,7 +39,7 @@ describe "Pokemon" do
       expect(pikachu_from_db.type).to eq("electric")
     end
   end
-
+=begin
   describe "BONUS" do
 
     before do
@@ -71,4 +71,5 @@ describe "Pokemon" do
       expect(Pokemon.find(2, @db).hp).to eq(0)
     end
   end
+=end
 end
